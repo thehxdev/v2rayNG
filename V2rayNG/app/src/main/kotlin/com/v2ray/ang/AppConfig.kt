@@ -94,21 +94,22 @@ object AppConfig {
     const val androidpackagenamelistUrl =
         "https://raw.githubusercontent.com/2dust/androidpackagenamelist/master/proxy.txt"
     const val v2rayCustomRoutingListUrl =
-        "https://raw.githubusercontent.com/2dust/v2rayCustomRoutingList/master/"
+        "https://raw.githubusercontent.com/thehxdev/v2rayCustomRoutingList/master/"
     const val v2rayNGUrl = "https://github.com/2dust/v2rayNG"
     const val v2rayNGIssues = "$v2rayNGUrl/issues"
     const val v2rayNGWikiMode = "$v2rayNGUrl/wiki/Mode"
     const val v2rayNGPrivacyPolicy = "https://raw.githubusercontent.com/2dust/v2rayNG/master/CR.md"
     const val PromotionUrl = "aHR0cHM6Ly85LjIzNDQ1Ni54eXovYWJjLmh0bWw="
-    const val GeoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/"
-    const val TgChannelUrl = "https://t.me/github_2dust"
-    const val DelayTestUrl = "https://www.gstatic.com/generate_204"
+    // const val GeoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/"
+    const val GeoUrl = "https://github.com/Chocolate4U/Iran-v2ray-rules/releases/latest/download/"
+    const val TgChannelUrl = "https://t.me/hxnotes"
+    const val DelayTestUrl = "https://speed.cloudflare.com"
     const val DelayTestUrl2 = "https://www.google.com/generate_204"
 
     /** DNS server addresses. */
-    const val DNS_PROXY = "1.1.1.1"
-    const val DNS_DIRECT = "223.5.5.5"
-    const val DNS_VPN = "1.1.1.1"
+    const val DNS_PROXY = "9.9.9.9"
+    const val DNS_DIRECT = "1.1.1.1"
+    const val DNS_VPN = "9.9.9.9"
 
     /** Ports and addresses for various services. */
     const val PORT_LOCAL_DNS = "10853"
