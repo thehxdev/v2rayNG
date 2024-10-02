@@ -26,7 +26,7 @@ jobs:
     - name: Setup Golang
       uses: actions/setup-go@v5
       with:
-        go-version: '1.22.2'
+        go-version: '1.23.2'
 
     - name: Install gomobile
       run: |
@@ -42,7 +42,7 @@ jobs:
       run: |
         mkdir ${{ github.workspace }}/build
         cd ${{ github.workspace }}/build
-        git clone --depth=1 -b main https://github.com/2dust/AndroidLibXrayLite.git
+        git clone --depth=1 -b main https://github.com/thehxdev/AndroidLibXrayLite.git
         cd AndroidLibXrayLite
         go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
         gomobile init
