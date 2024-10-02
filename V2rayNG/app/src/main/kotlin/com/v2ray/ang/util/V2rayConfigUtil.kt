@@ -6,8 +6,8 @@ import android.util.Log
 
 import com.v2ray.ang.AppConfig
 import com.v2ray.ang.AppConfig.ANG_PACKAGE
-import com.v2ray.ang.AppConfig.GEOIP_CN
-import com.v2ray.ang.AppConfig.GEOSITE_CN
+import com.v2ray.ang.AppConfig.GEOIP_IR
+import com.v2ray.ang.AppConfig.GEOSITE_IR
 import com.v2ray.ang.AppConfig.LOOPBACK
 import com.v2ray.ang.AppConfig.GEOSITE_PRIVATE
 import com.v2ray.ang.AppConfig.PROTOCOL_FREEDOM
@@ -240,7 +240,7 @@ object V2rayConfigUtil {
     private fun customLocalDns(v2rayConfig: V2rayConfig): Boolean {
         try {
             if (settingsStorage?.decodeBool(AppConfig.PREF_FAKE_DNS_ENABLED) == true) {
-                val geositeCn = arrayListOf(GEOSITE_CN)
+                val geositeIr = arrayListOf(GEOSITE_IR)
                 val proxyDomain = userRule2Domain(TAG_PROXY)
                 val directDomain = userRule2Domain(TAG_DIRECT)
                 // fakedns with all domains to make it always top priority
@@ -248,7 +248,7 @@ object V2rayConfigUtil {
                     0,
                     V2rayConfig.DnsBean.ServersBean(
                         address = "fakedns",
-                        domains = geositeCn.plus(proxyDomain).plus(directDomain)
+                        domains = geositeIr.plus(proxyDomain).plus(directDomain)
                     )
                 )
             }
@@ -331,8 +331,8 @@ object V2rayConfigUtil {
             // domestic DNS
             val domesticDns = Utils.getDomesticDnsServers()
             val directDomain = userRule2Domain(TAG_DIRECT)
-            val isCnRoutingMode = directDomain.contains(GEOSITE_CN)
-            val geoipCn = arrayListOf(GEOIP_CN)
+            val isCnRoutingMode = directDomain.contains(GEOSITE_IR)
+            val geoipCn = arrayListOf(GEOIP_IR)
             if (directDomain.size > 0) {
                 servers.add(
                     V2rayConfig.DnsBean.ServersBean(

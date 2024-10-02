@@ -103,19 +103,13 @@ object AppConfig {
     const val DelayTestUrl2 = "https://www.google.com/generate_204"
 
     /** DNS server addresses. */
-<<<<<<< HEAD
     const val DNS_PROXY = "9.9.9.9"
     const val DNS_DIRECT = "1.1.1.1"
     const val DNS_VPN = "9.9.9.9"
-=======
-    const val DNS_PROXY = "1.1.1.1"
-    const val DNS_DIRECT = "223.5.5.5"
-    const val DNS_VPN = "1.1.1.1"
     const val GEOSITE_PRIVATE = "geosite:private"
-    const val GEOSITE_CN = "geosite:cn"
+    const val GEOSITE_IR = "geosite:ir"
     const val GEOIP_PRIVATE = "geoip:private"
-    const val GEOIP_CN = "geoip:cn"
->>>>>>> a95f2801025bba0229662caac390c5362c3f885b
+    const val GEOIP_IR = "geoip:ir"
 
     /** Ports and addresses for various services. */
     const val PORT_LOCAL_DNS = "10853"
