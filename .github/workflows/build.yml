@@ -44,6 +44,8 @@ jobs:
         cd ${{ github.workspace }}/build
         git clone --depth=1 -b main https://github.com/thehxdev/AndroidLibXrayLite.git
         cd AndroidLibXrayLite
+        chmod 755 dl_ir_assets.bash
+        ./dl_ir_assets.bash
         go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
         gomobile init
         go mod tidy -v
